@@ -32,6 +32,8 @@ int main(int argc, char **argv)
     return false;
   }
 
+  cout << "Using OpenCV Version: " << CV_VERSION << endl;
+
   main_image = imread(argv[1], 1);
   main_image.copyTo(output_image);
   int width = main_image.cols;
@@ -56,9 +58,6 @@ int main(int argc, char **argv)
       Point p_start(c, r);
       Point p_end(c + w, r + h);
       rectangle(output_image, p_start, p_end, RED);
-
-      imshow("SAMPLE", output_image);
-      waitKey(0);
     }
   }
 
