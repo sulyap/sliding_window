@@ -54,8 +54,11 @@ int main(int argc, char **argv)
 
       // draw
       Point p_start(c, r);
-      Point p_end(c + step, r + step);
+      Point p_end(c + w, r + h);
       rectangle(output_image, p_start, p_end, RED);
+
+      imshow("SAMPLE", output_image);
+      waitKey(0);
     }
   }
 
